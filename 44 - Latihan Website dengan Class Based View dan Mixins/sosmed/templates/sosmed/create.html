@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+
+{% block contents %}
+    <h1>{{ page_title }}</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ akun_form.as_table }}
+        </table>
+
+        <button type="submit">Kirim</button>
+    </form>
+{% endblock %}

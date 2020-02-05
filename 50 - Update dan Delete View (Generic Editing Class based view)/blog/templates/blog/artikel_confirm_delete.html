@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Apakah anda yakin ingin menghapus artikel? <br><strong>{{ object }}</strong></p>
+        <input type="submit" value="Ya">
+        <a href="{% url 'blog:list' 'all'%}">
+            <input type="button" value="Tidak">
+        </a>
+    </form>
+</body>
+</html>

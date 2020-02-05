@@ -1,0 +1,75 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static "vendor/bootstrap/bootstrap.css" %}">
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark" id="myNav">
+      <a class="navbar-brand" href="#">
+          <img style="height: 30px" src="{% static "img/logo.png"%}" alt="">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="/blog" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a href="/about" class="nav-link">About</a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-white text-center">
+        <h1 class="display-4">{{heading}}</h1>
+        <p class="lead">{{subheading}}</p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container bg-info text-dark shadow" style="margin-top: -100px" id="myBody">
+            <div class="row" style="height: 400px">
+                <h1>content1</h1>
+            </div>
+        </div>
+
+        <div class="container bg-warning text-white shadow">
+            <div class="row" style="height: 300px">
+                <h2>content2</h2>
+            </div>
+        </div>
+
+        <div class="container bg-danger text-dark shadow">
+            <div class="row" style="height: 300px">
+                <h2>content3</h2>
+            </div>
+        </div>
+
+        <div class="container bg-dark text-white shadow">
+            <div class="row" style="height: 300px">
+                <h2>content3</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static "vendor/jquery/jquery.js" %}"></script>
+    <script src="{% static "vendor/popper/popper.js" %}"></script>
+    <script src="{% static "vendor/bootstrap/bootstrap.js" %}"></script>
+    <script src="{% static "js/scrolling.js" %}"></script>
+</body>
+</html>

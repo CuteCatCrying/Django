@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Title }}</title>
+</head>
+<body>
+    <h1>{{ Heading }}</h1>
+
+    <ul>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/blog/jurnal">Jurnal</a></li>
+        <li><a href="/blog/berita">Berita</a></li>
+        <li><a href="/blog/gosip">Gosip</a></li>
+    </ul>
+
+    {% for post in Posts %}
+        <h2>{{ post.judul }}</h2>
+        <h3>{{ post.waktu_posting }}</h3>
+        <p>{{ post.body }}</p>
+        <p>Kategori : {{ post.catogory }}</p>
+        <br>
+    {% endfor %}
+
+</body>
+</html>

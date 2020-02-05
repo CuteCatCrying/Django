@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block app_css %}
+    <link rel="stylesheet" href="{% static "about/css/styles.css" %}">
+{% endblock %}
+
+{% block header %}
+    <h1 class="text-left" style="margin-top: 180px">{{ heading }}</h1>
+    <p class="lead text-left">{{ subheading }}</p>
+{% endblock %}
+
+{% block content-1 %}
+    <div class="row" style="height: 400px">
+        <h1>Content about 1</h1>
+    </div>
+{% endblock %}
+
+{% block content-2 %}
+    <div class="row bg-warning" style="height: 400px">
+        <h1>Content about 2</h1>
+    </div>
+{% endblock %}

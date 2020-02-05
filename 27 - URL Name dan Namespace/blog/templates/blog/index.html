@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Judul }}</title>
+</head>
+<body>
+    <h1>{{ Judul }}</h1>
+
+    <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'blog:index' %}">Blog</a></li>
+        <li><a href="{% url 'blog:category' %}">Category</a></li>
+        <li><a href="{% url 'blog:single' %}">Single</a></li>
+        <li><a href="{% url 'blog:khusus' input='otong' %}">otong</a></li>
+        <li><a href="{% url 'blog:khusus' input='ucup' %}">ucup</a></li>
+    </ul>
+</body>
+</html>
